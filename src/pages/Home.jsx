@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LeadForm from '../components/LeadForm'
+import { supabase } from '../lib/supabase'
 
 function Home() {
   const navigate = useNavigate()
@@ -93,6 +94,26 @@ function Home() {
     if (validateStep(4)) {
       // Aquí iría la lógica para enviar los datos al backend
       console.log('Form data:', formData)
+
+
+      const { error } = await supabase
+      .from('leads')
+      .insert(
+        {
+          name: formData.nombre,
+          email: formData.email,
+          phone: formData.telefono,
+          province: formData.provincia,
+          contract_type: formData.tipoContrato,
+          dismissal_type: formData.tipoDespido,
+          recent_dismissal: formData.despidoReciente,
+        }
+      )
+  
+    if (error) {
+      console.error(error)
+      return
+    }
       
       // Redirigir a la página de agradecimiento
       navigate('/thank-you')
