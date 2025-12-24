@@ -20,6 +20,7 @@ function Home() {
     email: ''
   })
   const [errors, setErrors] = useState({})
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -92,31 +93,35 @@ function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (validateStep(4)) {
-      // Aquí iría la lógica para enviar los datos al backend
-      console.log('Form data:', formData)
+      setIsLoading(true)
+      try {
+        // Aquí iría la lógica para enviar los datos al backend
+        console.log('Form data:', formData)
 
+        const { error } = await supabase
+          .from('leads')
+          .insert({
+            name: formData.nombre,
+            email: formData.email,
+            phone: formData.telefono,
+            province: formData.provincia,
+            contract_type: formData.tipoContrato,
+            dismissal_type: formData.tipoDespido,
+            recent_dismissal: formData.despidoReciente,
+          })
 
-      const { error } = await supabase
-      .from('leads')
-      .insert(
-        {
-          name: formData.nombre,
-          email: formData.email,
-          phone: formData.telefono,
-          province: formData.provincia,
-          contract_type: formData.tipoContrato,
-          dismissal_type: formData.tipoDespido,
-          recent_dismissal: formData.despidoReciente,
+        if (error) {
+          console.error(error)
+          setIsLoading(false)
+          return
         }
-      )
-  
-    if (error) {
-      console.error(error)
-      return
-    }
-      
-      // Redirigir a la página de agradecimiento
-      navigate('/thank-you')
+
+        // Redirigir a la página de agradecimiento
+        navigate('/thank-you')
+      } catch (error) {
+        console.error('Error submitting form:', error)
+        setIsLoading(false)
+      }
     }
   }
 
@@ -143,6 +148,7 @@ function Home() {
                 handleNext={handleNext}
                 handleBack={handleBack}
                 handleSubmit={handleSubmit}
+                isLoading={isLoading}
               />
             </div>
           </div>
@@ -332,6 +338,7 @@ function Home() {
             handleNext={handleNext}
             handleBack={handleBack}
             handleSubmit={handleSubmit}
+            isLoading={isLoading}
           />
         </div>
       </section>

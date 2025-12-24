@@ -20,7 +20,8 @@ function LeadForm({
   handleChange,
   handleNext,
   handleBack,
-  handleSubmit
+  handleSubmit,
+  isLoading = false
 }) {
 
   const renderStep = () => {
@@ -319,9 +320,20 @@ function LeadForm({
         ) : (
           <button
             type="submit"
-            className={`px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg ${step === 4 ? 'w-full sm:flex-1' : 'flex-1'}`}
+            disabled={isLoading}
+            className={`px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${step === 4 ? 'w-full sm:flex-1' : 'flex-1'}`}
           >
-            👉 Revisar mi caso gratis
+            {isLoading ? (
+              <>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Enviando...</span>
+              </>
+            ) : (
+              '👉 Revisar mi caso gratis'
+            )}
           </button>
         )}
       </div>
