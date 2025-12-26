@@ -17,8 +17,8 @@ function Header() {
             >
               Inicio
             </Link> */}
-            <span className="text-gray-700 pl-3 text-end text-sm font-sm hidden md:block">Contacto con abogados laboralistas</span>
-            <span className="text-gray-700 pl-3 text-end text-sm font-sm md:hidden">Plataforma legal laboral</span>
+            <span className="text-gray-700 pl-3 text-end text-sm font-sm hidden md:block">¿Te han despedido? Revisa tu caso gratis</span>
+            <span className="text-gray-700 pl-3 text-end text-sm font-sm hidden">¿Te han despedido? Revisa tu caso gratis</span>
            
           </div>
         </div>

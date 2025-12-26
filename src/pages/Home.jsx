@@ -136,7 +136,8 @@ function Home() {
                 ¿Te han despedido?
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                Te ponemos en contacto con un abogado laboralista en Barcelona para revisar tu despido, <span className="font-bold text-indigo-600">sin compromiso</span>
+              Revisión clara y sin compromiso de tu despido en Barcelona.
+              Tu caso será evaluado por profesionales especializados.
               </p>
             </div>
             <div>
@@ -231,7 +232,7 @@ function Home() {
                 Revisamos tu caso
               </h3>
               <p className="text-gray-600">
-                Un abogado laboralista experto analiza tu situación y te llama en menos de 24 horas.
+                Profesionales especializados analizan tu situación y te informan de los próximos pasos.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-md">
@@ -242,10 +243,14 @@ function Home() {
                 Defendemos tus derechos
               </h3>
               <p className="text-gray-600">
-                Si tienes derecho a indemnización, luchamos por conseguirla. Solo pagas si ganamos.
+                Si tienes derecho a indemnización, te orientamos para reclamarla con ayuda profesional.
               </p>
             </div>
           </div>
+        </div>
+        <div className=" w-full text-center mt-10">
+          <span className="text-gray-600 text-sm text-center italic">Tus datos se utilizarán para analizar tu caso y podrán compartirse con abogados colaboradores </span>
+
         </div>
       </section>
 
@@ -277,7 +282,7 @@ function Home() {
                 ¿Qué pasa si no sé qué tipo de despido es?
               </h3>
               <p className="text-gray-600">
-                No te preocupes. Nuestro abogado revisará tu caso y te explicará qué tipo de despido es y qué derechos tienes.
+                No te preocupes. Un profesional especializado revisará tu caso y te explicará las opciones disponibles.
               </p>
             </div>
             <div className="pb-6">
