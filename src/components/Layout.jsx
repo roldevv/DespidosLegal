@@ -5,7 +5,7 @@ import Footer from './Footer'
 function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-grow">
         <Outlet />
       </main>

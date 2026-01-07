@@ -33,36 +33,36 @@ function LeadForm({
               ¿Te han despedido recientemente?
             </h3>
             <div className="space-y-3">
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="despidoReciente"
                   value="menos20"
                   checked={formData.despidoReciente === 'menos20'}
                   onChange={(e) => handleChange('despidoReciente', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Sí, hace menos de 20 días</span>
               </label>
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="despidoReciente"
                   value="mas20"
                   checked={formData.despidoReciente === 'mas20'}
                   onChange={(e) => handleChange('despidoReciente', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Sí, hace más de 20 días</span>
               </label>
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="despidoReciente"
                   value="comunicado"
                   checked={formData.despidoReciente === 'comunicado'}
                   onChange={(e) => handleChange('despidoReciente', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Me han comunicado que me van a despedir</span>
               </label>
@@ -80,47 +80,47 @@ function LeadForm({
               Tipo de despido
             </h3>
             <div className="space-y-3">
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="tipoDespido"
                   value="disciplinario"
                   checked={formData.tipoDespido === 'disciplinario'}
                   onChange={(e) => handleChange('tipoDespido', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Disciplinario</span>
               </label>
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="tipoDespido"
                   value="objetivo"
                   checked={formData.tipoDespido === 'objetivo'}
                   onChange={(e) => handleChange('tipoDespido', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Objetivo</span>
               </label>
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="tipoDespido"
                   value="improcedente"
                   checked={formData.tipoDespido === 'improcedente'}
                   onChange={(e) => handleChange('tipoDespido', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">Improcedente</span>
               </label>
-              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+              <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                 <input
                   type="radio"
                   name="tipoDespido"
                   value="no-se"
                   checked={formData.tipoDespido === 'no-se'}
                   onChange={(e) => handleChange('tipoDespido', e.target.value)}
-                  className="w-5 h-5 text-indigo-600"
+                  className="w-5 h-5 text-blue-600"
                 />
                 <span className="ml-3 text-gray-700">No lo sé</span>
               </label>
@@ -141,7 +141,7 @@ function LeadForm({
               <select
                 value={formData.provincia}
                 onChange={(e) => handleChange('provincia', e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
               >
                 <option value="">Selecciona una provincia</option>
                 {PROVINCIAS.map(prov => (
@@ -157,36 +157,36 @@ function LeadForm({
                 Tipo de contrato
               </label>
               <div className="space-y-3">
-                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                   <input
                     type="radio"
                     name="tipoContrato"
                     value="indefinido"
                     checked={formData.tipoContrato === 'indefinido'}
                     onChange={(e) => handleChange('tipoContrato', e.target.value)}
-                    className="w-5 h-5 text-indigo-600"
+                    className="w-5 h-5 text-blue-600"
                   />
                   <span className="ml-3 text-gray-700">Indefinido</span>
                 </label>
-                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                   <input
                     type="radio"
                     name="tipoContrato"
                     value="temporal"
                     checked={formData.tipoContrato === 'temporal'}
                     onChange={(e) => handleChange('tipoContrato', e.target.value)}
-                    className="w-5 h-5 text-indigo-600"
+                    className="w-5 h-5 text-blue-600"
                   />
                   <span className="ml-3 text-gray-700">Temporal</span>
                 </label>
-                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-indigo-500 transition-colors">
+                <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                   <input
                     type="radio"
                     name="tipoContrato"
                     value="autonomo"
                     checked={formData.tipoContrato === 'autonomo'}
                     onChange={(e) => handleChange('tipoContrato', e.target.value)}
-                    className="w-5 h-5 text-indigo-600"
+                    className="w-5 h-5 text-blue-600"
                   />
                   <span className="ml-3 text-gray-700">Autónomo / falso autónomo</span>
                 </label>
@@ -212,7 +212,7 @@ function LeadForm({
                 type="text"
                 value={formData.nombre}
                 onChange={(e) => handleChange('nombre', e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
                 placeholder="Tu nombre"
               />
               {errors.nombre && (
@@ -227,7 +227,7 @@ function LeadForm({
                 type="tel"
                 value={formData.telefono}
                 onChange={(e) => handleChange('telefono', e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
                 placeholder="612 345 678"
                 required
               />
@@ -243,7 +243,7 @@ function LeadForm({
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleChange('email', e.target.value)}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-indigo-500 focus:outline-none"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none"
                 placeholder="tu@email.com"
                 required
               />
@@ -284,13 +284,13 @@ function LeadForm({
       {/* Progress indicator */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-indigo-600">
+          <span className="text-sm font-medium text-blue-600">
             {getProgressMessage()}
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
-            className="bg-indigo-600 h-2 rounded-full transition-all duration-300"
+            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${(step / 4) * 100}%` }}
           />
         </div>
@@ -304,7 +304,7 @@ function LeadForm({
           <button
             type="button"
             onClick={handleBack}
-            className={`px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors ${step === 4 ? 'w-full sm:flex-1' : 'flex-1'}`}
+            className={`border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors ${step === 4 ? 'w-auto px-4 py-2 text-sm' : 'flex-1 px-6 py-3'}`}
           >
             Atrás
           </button>
@@ -313,7 +313,7 @@ function LeadForm({
           <button
             type="button"
             onClick={handleNext}
-            className="flex-1 px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+            className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Siguiente
           </button>
@@ -321,7 +321,7 @@ function LeadForm({
           <button
             type="submit"
             disabled={isLoading}
-            className={`px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${step === 4 ? 'w-full sm:flex-1' : 'flex-1'}`}
+            className={`px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${step === 4 ? 'w-full sm:flex-1' : 'flex-1'}`}
           >
             {isLoading ? (
               <>
